@@ -2473,34 +2473,14 @@
 						},
 						{
 							"_type": "FreelineEdgeView",
-							"_id": "AAAAAAF8g1MQRSPAfqY=",
+							"_id": "AAAAAAF8maatnFexxWg=",
 							"_parent": {
 								"$ref": "AAAAAAF8ejmgnS5QwZo="
 							},
 							"font": "Arial;13;0",
 							"lineStyle": 1,
-							"points": "536:248;536:24"
-						},
-						{
-							"_type": "FreelineEdgeView",
-							"_id": "AAAAAAF8g1O4sCPL6vg=",
-							"_parent": {
-								"$ref": "AAAAAAF8ejmgnS5QwZo="
-							},
-							"font": "Arial;13;0",
-							"lineStyle": 1,
-							"points": "888:24;888:88",
+							"points": "576:296;656:296",
 							"headEndStyle": 1
-						},
-						{
-							"_type": "FreelineEdgeView",
-							"_id": "AAAAAAF8g1Q2gSPVf/c=",
-							"_parent": {
-								"$ref": "AAAAAAF8ejmgnS5QwZo="
-							},
-							"font": "Arial;13;0",
-							"lineStyle": 1,
-							"points": "536:24;889:25"
 						}
 					]
 				},
