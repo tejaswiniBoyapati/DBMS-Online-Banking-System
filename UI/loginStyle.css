@@ -1,0 +1,218 @@
+.how-it-works-ver-3 { 
+    background-color: #ffffff; 
+    height: 350px; 
+   left: -500px;
+}
+
+.how-it-works-ver-3 .overlap-group2 { 
+    background-image: url(image-4.png); 
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 800px; 
+    width: 1500px;
+    position: relative;
+    top: -105px;
+}
+
+.how-it-works-ver-3 .overlap-group3 { 
+    background-color: var(--san-marino);
+    height: 620px;
+    left: 0;
+    position: absolute;
+    top: 213px; 
+    width: 1366px;
+}
+
+.how-it-works-ver-3 .overlap-group { 
+    background-color: var(--white);
+    border-radius: 5px;
+    height: 435px;
+    left: 801px; 
+    position: relative; 
+    top: 78px;
+    width: 421px;
+}
+
+.how-it-works-ver-3 .logo {
+   color: var(--black);
+   font-family: var(--font-family-noto_sans);
+   font-size: var (--font-size-x1);
+   font-weight: 600; 
+   height: 28px;
+   left: 39px;
+   letter-spacing: -0.34px; 
+   line-height: 28px;
+   position: absolute;
+   top: 36px;
+   white-space: nowrap;
+}
+
+.how-it-works-ver-3 .elements-row-hover {
+     background-color: var(--wild-sand); 
+     border-radius: 5px;
+     height: 45px;
+     left: 39px;
+     position: absolute;
+     top: 115px;
+     width: 342px;
+}
+.how-it-works-ver-3 .elements-row-hover-1 { 
+    background-color: var(--wild-sand);
+    border-radius: 5px;
+    height: 45px;
+    left: 39px;
+    position: absolute;
+    top: 213px;
+    width: 342px;
+ }
+ .how-it-works-ver-3 .overlap-group1 { 
+     background-color: #3c64b1; 
+     border-radius: 5px;
+     height: 45px; 
+     left: 39px;
+     position: absolute;
+     top: 311px;
+     width: 342px;
+}
+
+.how-it-works-ver-3 .login { 
+    color: var(--white);
+    font-family: var(--font-family-mulish); 
+    font-size: var(-font-size-1);
+    font-weight: 700;
+    left: 149;
+    letter-spacing: 0.20px;
+    line-height: 20px;
+    position: absolute;
+    top: 13px;
+    white-space: nowrap;
+}
+.how-it-works-ver-3 .user-id {
+    left: 39px;
+    letter-spacing: 0.20px;
+    position: absolute;
+    line-height: 20px;
+    white-space: nowrap;
+    width: 342px;
+    top: 87px;
+}
+.how-it-works-ver-3 .password { 
+    left: 39px;
+    letter-spacing: 0.20px; 
+    line-height: 20px; 
+    top: 184px;
+    white-space: nowrap; 
+    width: 342px;
+    position: absolute;
+}
+.how-it-works-ver-3 .forgot-my-login-details {
+      left: 39px; 
+      letter-spacing: 0.20px;
+      line-height: 20px; 
+      position: absolute;
+      top: 379px;
+      white-space: nowrap;
+      width: 342px;
+}
+.how-it-works-ver-3 .light-logo-left-5-li {
+background-color: var(--san-marino);
+height: 88px;
+left: 0;
+position: absolute;
+top: 25px;
+width: 1366px;
+}
+.how-it-works-ver-3 .links {
+    height: 18px;
+    left: 1224px;
+    position: absolute;
+    top: 35px;
+    width: 26px;
+}
+.how-it-works-ver-3 .eng{
+    color: var(--cape-cod);
+    font-family: var(--font-family-mulish);
+    font-size: var(--font-size-m);
+    font-weight: 600;
+    height: 18px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+}
+.how-it-works-ver-3 .logo-1 { 
+    color: #3c63b0; 
+    font-family: var(--font-family-lato); 
+    font-size: var(--font-size-x1);
+    font-weight: 700; 
+    height: 32px;
+    left: 165px;
+    letter-spacing: 0.20px; 
+    position: absolute;
+    line-height: 32px;
+    top: 28px;
+    white-space: nowrap;
+    width: 70px;
+}  
+.how-it-works-ver-3 .sort-down { 
+    height: 11px;
+    left: 1252px;
+    position: absolute; 
+    width: 11px;
+    top: 39px;
+}
+.how-it-works-ver-3.light-small-rights { 
+    background-color: var(--cape-cod);
+    height: 60px;
+    left: 0;
+    position: absolute;
+    top: 833px;
+    width: 1366px;
+}
+.how-it-works-ver-3 .copyright {
+    color: #c3cbcd;
+    font-family: var(--font-family-mulish);
+    font-size: var(--font-sixe-1);
+    font-weight: 600;
+    height: 16px;
+    left: 355px;
+    letter-spacing: 0.20px;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    top: 22px;
+    white-space: nowrap;
+    width: 656px;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:600|Mulish:400,700,600|Lato:700");
+
+.screen a{
+    display: contents;
+    text-decoration: none;
+}
+.container-center-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    pointer-events: none;
+    width: 100%;
+}
+.container-center-horizontal > * {
+    flex-shrink: 0;
+    pointer-events: auto;
+}
+.valign-text-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.how-it-works-ver-3 .rectangle-11 {
+    position: absolute;
+left: 58.64%;
+right: 10.54%;
+top: 21.61%;
+bottom: 21.74%;
+
+background: rgba(255, 255, 255, 0.62);
+border-radius: 20px;
+}
