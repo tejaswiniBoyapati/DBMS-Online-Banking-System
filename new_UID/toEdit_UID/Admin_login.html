@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="fontawesome/css/all.css">
+        <link rel="stylesheet" type="text/css" href="LoginForm.css">
+    </head>
+    <body>
+        <br><br><br><br>
+        <center>
+        <div class="login-form" >
+            <h2>ADMIN LOGIN</h2>
+            <form method="post" name="login_form" action="#"  onsubmit="return validation()">
+                <div class="input-field">
+                    <i class ="fas fa-user"></i>
+                    <input type="text" placeholder="EmpID" name="username">
+                </div>
+                <div class="input-field">
+                    <i class ="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" name="userpass">
+                </div>
+                
+                <div id="login_error"></div>
+
+                <button tyoe="submit">Sign In</button>
+                
+                <div class="extra">
+                   <a href="#">Forgot Password?</a>
+                   <a href="#">Create an Account</a>
+                </div>
+            </form>
+        </div>
+    </center>
+        <script>
+            function validation()
+            {
+                let username=document.forms['login_form']['username'];
+                let userpass=document.forms['login_form']['userpass'];
+                let login_error=document.getElementById('login_error');
+                
+                if(username.value=='' && userpass.value=='')
+                {
+                    login_error.innerHTML="Fields are empty.";
+                    login_error.style.display="block";
+                    return false;
+                }
+                if(username.value=='')
+                {
+                    login_error.innerHTML="Username Field is Empty";
+                    login_error.style.display="block";
+                    return false;
+                }
+                if(userpass.value=='')
+                {
+                    login_error.innerHTML="Enter the Password!";
+                    login_error.style.display="block";
+                    return false;
+                }
+
+             return true;
+            }
+        </script>
+    </body>
+</html>
