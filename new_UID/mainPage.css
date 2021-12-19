@@ -8,7 +8,7 @@ a{
     width: 300px;
     margin: 0 auto; 
     overflow: auto;
-    background-color: #6c91d6;
+    background-color: #073996;
     border-radius: 1px;
     box-shadow: 5px 5px 20px;
   }
@@ -52,7 +52,7 @@ a{
   }
   
   .info-card{
-    background-color: #7E8AA2; 
+    background-color: #073996; 
     font-family: Sans-Serif; 
     color: white; 
     line-height: 150%;
