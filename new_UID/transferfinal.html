@@ -2,9 +2,8 @@
 <html>
     <head>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" type="text/css" href="mainPage.css">
-        <link rel="stylesheet" type="text/css" href="nav_logo.css">
-        <link rel="stylesheet" type="text/css" href="LoginForm.css">
+        <link rel="stylesheet" type="text/css" href="mainPage_transfer.css">
+        <link rel="stylesheet" type="text/css" href="nav.logo_transfer.css">
     </head>
     <body style="background: url(https://cdn.discordapp.com/attachments/862331232409878548/917849375907147846/shapelined-_JBKdviweXI-unsplash.jpg); background-size: 100%;">
     
@@ -51,60 +50,67 @@
                 </div>
             </div>
         </div>
-       <br><br><br><br><br><br>
+       <br><br><br><br>
        
-       <center>
-        <div class="login-form" >
-            <h2>MEMBER LOGIN</h2>
-            <form method="post" name="login_form" action="#"  onsubmit="return validation()">
-                <div class="input-field">
-                    <i class ="fas fa-user"></i>
-                    <input type="text" placeholder="Username" name="username">
+       <table align="center" vertical align="top" style="vertical-align:top;" cellspacing="65">
+        <tr>
+            <td><font color="#3399ff" size="25" align="center"><u>Transfer Page</u></font>
+                    </div>
+                    <div id="show_bal">
+                    </span>
+                    </div>
                 </div>
-                <div class="input-field">
-                    <i class ="fas fa-lock"></i>
-                    <input type="password" placeholder="Password" name="userpass">
-                </div>
-                
-                <div id="login_error"></div>
-
-                <button tyoe="submit">Sign In</button>
-                
-                <div class="extra">
-                   <a href="#">Forgot Password?</a>
-                   <a href="#">Create an Account</a>
-                </div>
-            </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <font size="5"><u>Please enter the details below to transfer money :</u></font><br>
+            </td>
+        </tr>
+    </table>
+    <div id="transfer_form">
+        <form name="transfer" onSubmit="return submit_form();" method="post">
+                <table align="center" width=50% cellpadding=8px>
+                <tr>
+                    <td align="center" colspan=4><font size="5">All <span class="imp" style = "color: red";>FIELDS </span>are Important.</font></td>
+                </tr>
+                <tr>
+                    <td colspan=2 id="show_err"></td>
+                </tr>
+                <tr>
+                    <td class="field_name"><font size="4">Receiver Account No :</font></td>
+                    <td>
+                        <input id="field" name="reciever_accno" type="text" maxlength=10>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="field_name"><font size="4">Receiver name :</font></td>
+                    <td>
+                    <input id="field" name="reciever_name" type="text" maxlength=32>
+                    <td>
+                        <table class="imp">
+                            <tr>
+                                <td style="vertical-align:center;"></td>
+                            <td>  </td>  
+                        </tr>
+                        </table>
+                        </td>
+                </tr>
+                <tr>
+                    <td class="field_name"><font size="4">Amount :</font></td>
+                    <td><input id="field" name="transfer_amount" type="text" maxlength=8></td>
+                </tr>
+                <tr>
+                    <td align="center" colspan=2><input type="submit" value="Submit" font size="4px"  ></td>
+                </tr>
+       </table>
+       </div>
+       </form>
+      </div>
+       
+       <div id="footer" style="margin-top:10%;">
+            <hr>
+            CopyRight &copy; 2021 United Bank.
         </div>
-    </center>
-        <script>
-            function validation()
-            {
-                let username=document.forms['login_form']['username'];
-                let userpass=document.forms['login_form']['userpass'];
-                let login_error=document.getElementById('login_error');
-                
-                if(username.value=='' && userpass.value=='')
-                {
-                    login_error.innerHTML="Fields are empty.";
-                    login_error.style.display="block";
-                    return false;
-                }
-                if(username.value=='')
-                {
-                    login_error.innerHTML="Username Field is Empty";
-                    login_error.style.display="block";
-                    return false;
-                }
-                if(userpass.value=='')
-                {
-                    login_error.innerHTML="Enter the Password!";
-                    login_error.style.display="block";
-                    return false;
-                }
-
-             return true;
-            }
-        </script>
     </body>
 </html>

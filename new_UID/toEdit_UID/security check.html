@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+        <title>security-check</title>
+        <link rel="stylesheet" href="check.css" type="text/css">
+        <script type = "text/javascript">
+            function validateForm(){
+                var nname=document.getElementById("name").value;
+                if(nname=="")
+                {
+                    document.getElementById("namee").innerHTML="**Fill this**";
+                    return false;
+                }
+                else{
+                document.getElementById("namee").innerHTML="";
+                return true;
+                }}
+            </script>
+            </head>
+  <body><form method ="post" action="scsdc.html"  onsubmit="return validateForm()">
+        <center><div class="top">
+        <a style="color: red;">           UFSC BANK</a>
+        </div></center>
+    <div class="emp">
+    <div class="down">
+        <div class="dtop">
+            <a style="color: black;">Authentication</a>
+        </div>
+        <center><div class="dmid">
+            <a style="color: rgb(145, 139, 139);">Please answer the below security questions since there were changes detected in the way , you have logged in . you would have set the answer when you logged in for the first time.</a>
+        </div>
+        <div class="ddt">
+            <a style="color: black; text-align: left;">Answer this security questions</a>
+        </div>
+        <div class="ddd">
+            <table  cellpadding="9" align="center">
+                <form method ="post"  onsubmit="return validateForm()">
+            <tr><td><a style="color: black;">question?</a></td></tr>
+            <tr><td><input type ="text" id="name"  ><span  id="namee" style="color: red; font-size: 18px;"></span></td></tr>
+            <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="submit" id="submit" name="Submit" value="Confirm"  /></label></td></tr>
+        </div></center></form>
+    </div></form>
+    </body>
+</HTML>

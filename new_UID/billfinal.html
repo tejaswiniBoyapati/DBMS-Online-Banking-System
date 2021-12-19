@@ -2,13 +2,10 @@
 <html>
     <head>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" type="text/css" href="mainPage.css">
+        <link rel="stylesheet" type="text/css" href="billfinal.css">
         <link rel="stylesheet" type="text/css" href="nav_logo.css">
-
     </head>
-    <body style="background: url(https://cdn.discordapp.com/attachments/862331232409878548/917849375907147846/shapelined-_JBKdviweXI-unsplash.jpg); background-size: 100%;">
-    
-    </style>
+    <body>
         <div id="wrap">
             <div id="top">
                 <a href="#"><img src="LOGO.PNG" height="100px" width="100px" style="border:0px; text-decoration:none;"></a>
@@ -24,7 +21,7 @@
                         <li><a href="#">&nbsp;Home&nbsp;</a></li>
                         <li><a href="#">&nbsp;Services&nbsp;</a>
                             <ul id="sub_menu_services">
-                                <li><a href="trialLogin.html">&nbsp;Account&nbsp;</a></li>
+                                <li><a href="LoginForm.html">&nbsp;Account&nbsp;</a></li>
                                 <li><a href="personal_banking.html">&nbsp;Trasactions&nbsp;</a></li>
                                 <li><a href="corporate_banking.html">&nbsp;Bill Payment&nbsp;</a></li>
                                 <li><a href="corporate_banking.html">&nbsp;Loans&nbsp;</a></li>
@@ -33,8 +30,8 @@
                         
                         <li><a href="#">&nbsp;Internet Banking&nbsp;</a>
                             <ul id="sub_menu_services">
-                                <li><a href="trialLogin.html">&nbsp;LOGIN&nbsp;</a></li>
-                                <li><a href="trialRegister.html">&nbsp;REGISTER&nbsp;</a></li>
+                                <li><a href="LoginForm.html">&nbsp;LOGIN&nbsp;</a></li>
+                                <li><a href="registerForm.html">&nbsp;REGISTER&nbsp;</a></li>
                             </ul>
                         </li>
 
@@ -51,44 +48,49 @@
                 </div>
             </div>
         </div>
-       <br><br><br><br><br><br><br><br><br>
-       
-       <table align="center" cellspacing="65">
-           <tr>
-               <td>
-                <div id="wrapper">
-            
-                    <div id="my-info">
-                     <a href="#"> <h2>TRANSACTIONS</h2></a>
-                    </div>
-                 </div>
-               </td> 
-               <td>
-                <div id="wrapper">
-            
-                    <div id="my-info">
-                     <a href="#"> <h2>BILL PAYMENTS</h2></a>
-                    </div>
-                 </div>
-               </td>
-               <td>
-                <div id="wrapper">
-            
-                    <div id="my-info">
-                     <a href="#"> <h2>Loans</h2></a>
-                    </div>
-                 </div>
-               </td>
-           </tr>
-
-       </table>
-       
+       <br><br><br><br>
       
-        
-       
-       <div id="footer" style="margin-top:10%;">
-            <hr>
-            CopyRight &copy; 2021 United Bank.
+    <div class="container">
+        <div class="col1">
+          <div class="card">
+            <div class="front">
+              <div class="type"></div>
+            </div>
+            <div class="back"></div>
+          </div>
         </div>
+        <div class="col2">
+          <label>Card Number</label>
+          <input
+            class="number"
+            type="text"
+            ng-model="ncard"
+            maxlength="19"
+            onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
+          <label>Card Holder name</label>
+          <input class="inputname" type="text" placeholder="" />
+          <label>Expiry date</label>
+          <input class="expire" type="text" placeholder="MM / YYYY" />
+          <label>Security Number</label>
+          <input
+            class="ccv"
+            type="text"
+            placeholder="CVC"
+            maxlength="3"
+            onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
+          <label>Type</label>
+  
+          <select name="country">
+            <option selected="" value="Default">
+              (Please select the type of bill payment)
+            </option>
+            <option value="AF">Electricity bill</option>
+            <option value="AL">Mobile/DTH Recharge</option>
+            <option value="DZ">Credit card bill</option>
+          </select>
+          <button class="buy"><i class="material-icons"></i>Pay</button>
+        </div>
+      </div>
+      
     </body>
 </html>
