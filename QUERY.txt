@@ -1,0 +1,181 @@
+Create TABLE ADMINISTRATOR (Emp_id varchar(10) PRIMARY KEY, Emp_firstName varchar(30), Emp_lastName varchar(30), Emp_Gender char(1), Emp_DOB date, Emp_Designation varchar2(20),Hired_date date, Emp_workingStatus varchar2(20)); 
+--drop table ADMINISTRATOR;
+--desc ADMINISTRATOR;
+Create Table CUSTOMER (Customer_id int PRIMARY KEY, AccountID varchar(20), UserLoginID int, Customer_firstName varchar(30), Customer_lastName varchar(30), Customer_Gender char(1), DOB date
+, Customer_Address varchar2(100), Zip_code int, Email_Id varchar(30)); 
+--drop table CUSTOMER;
+Create table ACCOUNT_DETAILS (AccountID varchar(20) PRIMARY KEY, CurrentBalance float, AccountType varchar2(20), AccountStatus varchar2(20), SavingsInterestRate float); 
+Create table REGISTRATION (RegisterID int PRIMARY KEY, UserName varchar(20), UserLoginID int, Password varchar(12), Email_Id varchar(30), Mobile_no1 number(10));
+Create Table SECURITY_ANSS (UserLoginID int PRIMARY KEY, Security_QuestID varchar(3), Security_Ans varchar(20));
+Create Table SECURITY_QUEST (Security_QuestID varchar(3) PRIMARY KEY, Security_Questions varchar(50));
+Create table TRANSACTION (TransactionID varchar(15) PRIMARY KEY, TransactionDate date, TransactionTime timestamp, TransactionType varchar2(20), TransactionAmount float, NewBalance float,
+WithdrawalCount int, DepositCount int, OldBalance float);
+Create table LOANTYPE (Loan_Type varchar2(20) PRIMARY KEY, InterestRate float);
+Create table LOAN_DETAILS (LoanNumber int PRIMARY KEY, LoanAmount float, LoanApprovalDate date, Loan_Type varchar2(20)) ;
+Create table CARD_DETAILS (CardNumber varchar(16) PRIMARY KEY, CardHolder varchar2(20), CardType varchar(20), CCV number(3), ExpirtDate date) ;
+--desc CARD_DETAILS;
+Create table BILL_PAYMENTS (BillPayment_no varchar(20) PRIMARY KEY, PaymentType varchar(30),PaymentConfirmation varchar(15), PaymentAmount float); 
+Create table FailedTransactionLog (FailedTransaction_errorType varchar(30), FailedTransactionID varchar(15) PRIMARY KEY) ;
+Create Table USERLOGINS (UserLoginID int PRIMARY KEY, UserName varchar(20), password varchar(12));
+Create table Cus_Mobile (Customer_id int, Mobile_no number(10),PRIMARY KEY (Customer_id,Mobile_no));
+Create table Emp_Mob(Emp_id varchar(10), Emp_Mobile number(10),PRIMARY KEY (Emp_id, Emp_Mobile) );
+Create table  Loan_num(Customer_id int, LoanNumber int,PRIMARY KEY (Customer_id,LoanNumber));
+Create table Transact (AccountID varchar(20), TransactionID varchar(15), PRIMARY KEY (AccountID,TransactionID));
+Create table Bill (AccountID varchar(20), Billpayment_no varchar(20), PRIMARY KEY (AccountID,Billpayment_no));
+Create Table State_city(City varchar2(20),State varchar2(20));
+Create table Zip (Zip_code int, City varchar2(20));
+
+
+
+
+
+Create TABLE ADMINISTRATOR (Emp_id varchar(10) PRIMARY KEY, Emp_firstName varchar(30), Emp_lastName varchar(30), Emp_Gender char(1), Emp_DOB date, Emp_Designation varchar2(20),Hired_date date, Emp_workingStatus varchar2(20)); 
+Insert into ADMINISTRATOR values('AMAR0001','AMAR','S','M',date '1987-09-21','Manager',date '2015-08-09','Employeed');
+Insert into ADMINISTRATOR values('SARA0002','SARA','PAL','F',date '1995-05-01','Assistant',date '2021-06-20','Employeed');
+Insert into ADMINISTRATOR values('AMAL0004','AMALA','FAZIL','F',date '1988-09-26','Cashier',date '2020-08-29','Employeed');
+Insert into ADMINISTRATOR values('MICH0005','MICHAEL','B','M',date '1999-11-01','Credit Analyst',date '2018-02-15','Employeed');
+Insert into ADMINISTRATOR values('DANI0007','DANIEL','PAUL','M',date '1989-02-28','Credit Analyst',date '2017-09-03','Employeed');
+Insert into ADMINISTRATOR values('JOSH0003','JOSHUA','RAJ','M',date '1995-10-11','Loan Processor',date '2017-01-04','Employeed');
+Insert into ADMINISTRATOR values('BETT0009','BETTY','COOPER','F',date '1995-05-05','Assistant',date '2017-09-07','Employeed');
+Insert into ADMINISTRATOR values('SHAR0011','SHARON','BIANCA','F',date '1987-08-18','Financial Analyst',date '2019-04-19','Employeed');
+Insert into ADMINISTRATOR values('EMIL0015','EMILA','CLARKE','F',date '1991-08-29','Auditor',date '2019-03-12','Resigned');
+Insert into ADMINISTRATOR values('RYAN0010','RYAN','GARY','M',date '1996-07-01','Auditor',date '2020-01-13','Employeed');
+--select * from ADMINISTRATOR;
+
+Create Table CUSTOMER (Customer_id int PRIMARY KEY, AccountID varchar(20), UserLoginID int, Customer_firstName varchar(30), Customer_lastName varchar(30), Customer_Gender char(1), DOB date
+, Customer_Address varchar2(100), Zip_code int, Email_Id varchar(30)); 
+Insert into CUSTOMER values(900001,'13520010018315',315001,'Nick','Santa','M',date '2000-01-01','81,West beach Road',625543,'nicksanta01@gmail.com');
+Insert into CUSTOMER values(900005,'13520010018005',315006,'Andrew','Donald','M',date '2001-01-10','47, Model Town',600001,'andrewdonald@gmail.com');
+Insert into CUSTOMER values(900023,'13520010018888',315049,'Eric','C','M',date '2001-11-21','A/2, Bunder Road, Sewri (east)', 600001,'ericc00901@gmail.com');
+Insert into CUSTOMER values(900031,'13520010018458',315100,'Sandra','Joe','F',date '2000-02-07','90/7A,Anna Road H O',600002,'sandrajoe01@gmail.com');
+Insert into CUSTOMER values(900002,'13520010018489',315101,'Carol','Amy','F',date '2003-08-31','Near Ariyalur Cement Factory',621704,'carolamy5601@gmail.com');
+Insert into CUSTOMER values(900099,'13520010018629',315016,'Donna','Kelly','F',date '1998-03-13','No.4, West MadaStreet',600107,'donnakelly01@gmail.com');
+Insert into CUSTOMER values(900035,'13520010018541',315086,'Tyler','Frank','M',date '1999-04-14','No.88, Mayor Ramanathan Salai',600034,'tylerfrank01@gmail.com');
+Insert into CUSTOMER values(900050,'13520010018111',315098,'Alice','Cooper','F',date '1999-05-15','No.370,Corporation Zone Office,Anna Salai',600015,'alicecooper01@gmail.com');
+Insert into CUSTOMER values(900008,'13520010018125',315019,'Jancy','Ann','F',date '2000-06-16','No.62, Basin Bridge Road', 600079,'jancyann01@gmail.com');
+Insert into CUSTOMER values(900011,'13520010018567',315028,'Billy','Bruce','M',date '2000-07-17','No.5, Anderson Road',600023,'billybruce01@gmail.com');
+Insert into CUSTOMER values(900012,'13520010018507',315045,'Carl','Terry','M',date '2003-08-18','No.33, Arcot Road',600087,'carlterry01@gmail.com');
+Insert into CUSTOMER values(900088,'13520010019007',315047,'Julia','Amber','F',date '2002-09-19','MMDA 2nd Main Street',600087,'juliaamber01@gmail.com');
+Insert into CUSTOMER values(900076,'13520010018606',315011,'Nick','Andrews','M',date '1999-10-20','No.51, E.H.Road',621704,'nickandrews01@gmail.com');
+Insert into CUSTOMER values(900109,'13520010018300',315012,'Joffery','San','M',date '1999-11-21','No.6,New street',600085,'jofferysan01@gmail.com');
+Insert into CUSTOMER values(900054,'13520010018290',315033,'John','Luck','M',date '1990-12-22','sastri nagar,8th cross street',600020,'johnluck6701@gmail.com');
+Insert into CUSTOMER values(900004,'13520010018261',315041,'Rikky','Pant','M',date '1987-01-23',' No.10,Panchayat Road',600107,'rikkypant01@gmail.com');
+Insert into CUSTOMER values(900034,'13520010018654',315050,'Nancy','Drew','F',date '1980-02-24','New MGR 1st Street',600107,'nancydrew01@gmail.com');
+Insert into CUSTOMER values(900059,'13520010018126',315002,'Ronnie','Lodge','F',date '1994-03-25','No.78,Seven Wells Street',600034,'ronnielodge01@gmail.com');
+Insert into CUSTOMER values(900019,'13520010018008',315099,'Martha','Jose','F',date '1994-04-26',' 508/1, Mint Street, Near Govt. Press',600023,'marthajose01@gmail.com');
+Insert into CUSTOMER values(900010,'13520010018112',315009,'Rose','Michael','F',date '1986-05-27','No.27, 61st street,10th sector',600085,'rosemichael01@gmail.com');
+--select * from CUSTOMER;
+--drop table CUSTOMER;
+
+Create Table ACCOUNT_DETAILS (AccountID varchar(20) PRIMARY KEY, CurrentBalance float, AccountType varchar2(20), AccountStatus varchar2(20), SavingsInterestRate float); 
+Insert into ACCOUNT_DETAILS values('13520010018315',3500.0,'Savings','Current',3.5);
+Insert into ACCOUNT_DETAILS values('13520010018888',48000.0,'Salary','Current',4.0);
+Insert into ACCOUNT_DETAILS values('13520010018005',33490.0,'Savings','Inactive',0);
+Insert into ACCOUNT_DETAILS values('13520010018458',35209.0,'Savings','Current',3.5);
+Insert into ACCOUNT_DETAILS values('13520010018111',350.0,'Savings','Current',3.5);
+Insert into ACCOUNT_DETAILS values('13520010018567',2098.0,'Savings','Current',3.5);
+Insert into ACCOUNT_DETAILS values('13520010018507',10089.0,'Salary','Current',4.0);
+Insert into ACCOUNT_DETAILS values('13520010018606',1008.0,'Salary','Current',4.0);
+Insert into ACCOUNT_DETAILS values('13520010019007',90065.0,'Savings','Current',3.5);
+Insert into ACCOUNT_DETAILS values('13520010018489',900.0,'Salary','Current',4.0);
+Insert into ACCOUNT_DETAILS values('13520010018629',1098.80,'Savings','Current',3.5);
+Insert into ACCOUNT_DETAILS values('13520010018541',5768.30,'FD','Current',3.9);
+Insert into ACCOUNT_DETAILS values('13520010018125',2747.90,'Savings','Current',3.5);
+Insert into ACCOUNT_DETAILS values('13520010018300',12893.0,'FD','Inactive',0);
+Insert into ACCOUNT_DETAILS values('13520010018654',87872.0,'Salary','Current',4.0);
+Insert into ACCOUNT_DETAILS values('13520010018290',890.0,'Salary','Current',4.0);
+Insert into ACCOUNT_DETAILS values('13520010018112',4777.0,'FD','Current',3.9);
+Insert into ACCOUNT_DETAILS values('13520010018008',9989.0,'Savings','Current',3.5);
+Insert into ACCOUNT_DETAILS values('13520010018126',99978.0,'Savings','Current',3.5);
+Insert into ACCOUNT_DETAILS values('13520010018261',8988.34,'Salary','Current',4.0);
+--select * from ACCOUNT_DETAILS;
+
+Create table REGISTRATION (RegisterID int PRIMARY KEY, UserName varchar(20), UserLoginID int, Password varchar(12), Email_Id varchar(30), Mobile_no1 number(10));
+Insert into REGISTRATION values(250001,'NickSanta',315001,'abcdefghijkl','nicksanta01@gmail.com',9087685649);
+Insert into REGISTRATION values(250002,'CarolAmy',315101,'mskxhdnzjsnd','carolamy5601@gmail.com',8084383948);
+Insert into REGISTRATION values(250003,'DonnaKelly',315016,'abcdebkzdnkx','donnakelly01@gmail.com',9902746392);
+Insert into REGISTRATION values(250004,'JuliaAmber',315047,'abdkecxjfbd','juliaamber01@gmail.com',9027492678);
+Insert into REGISTRATION values(250005,'BillyBruce',315028,'iskfjddkzuql','nicksanta01@gmail.com',8818384927);
+Insert into REGISTRATION values(250006,'TylerFrank',315086,'weguyqoitjkl','billybruce01@gmail.com',9018375026);
+Insert into REGISTRATION values(250007,'AliceCooper',315098,'aaypletcuirl','alicecooper01@gmail.com',7189356792);
+Insert into REGISTRATION values(250008,'NickAndrews',315011,'auielodtyupl','nickandrews01@gmail.com',7284509267);
+Insert into REGISTRATION values(250009,'CarlTerry',315045,'abcdaiporylo','carlterry01@gmail.com',8820947389);
+Insert into REGISTRATION values(250010,'MarthaJose',315099,'ndpoeyuprnzl','marthajose01@gmail.com',9289383900);
+Insert into REGISTRATION values(250011,'RonnieLodge',315002,'bamkywkoeudj','ronnielodge01@gmail.com',8209340923);
+Insert into REGISTRATION values(250012,'JofferySan',315012,'pwormxtjsilk','jofferysan01@gmail.com',9092830234);
+select * from REGISTRATION;
+
+Create Table SECURITY_ANSS (UserLoginID int PRIMARY KEY, Security_QuestID varchar(3), Security_Ans varchar(20));
+Insert into SECURITY_ANSS values(315001,'#03','Fanta');
+Insert into SECURITY_ANSS values(315012,'#01','Surya');
+Insert into SECURITY_ANSS values(315002,'#01','Samantha');
+Insert into SECURITY_ANSS values(315099,'#02','Chetan Bhagat');
+Insert into SECURITY_ANSS values(315045,'#08','Jurassic park');
+Insert into SECURITY_ANSS values(315011,'#07','Mercedes Benz');
+Insert into SECURITY_ANSS values(315098,'#08','Twilight');
+Insert into SECURITY_ANSS values(315101,'#05','Mrs.Manjusha');
+Insert into SECURITY_ANSS values(315028,'#03','Sky Blue');
+Insert into SECURITY_ANSS values(315086,'#01','Emma Watson');
+Insert into SECURITY_ANSS values(315047,'#04','Amrita High School');
+Insert into SECURITY_ANSS values(315016,'#06','Reading Books');
+--select * from SECURITY_ANSS;
+
+Create Table SECURITY_QUEST (Security_QuestID varchar(3) PRIMARY KEY, Security_Questions varchar(50));
+Insert into SECURITY_QUEST values('#01','Your faviourite book');
+
+Create table TRANSACTION (TransactionID varchar(15) PRIMARY KEY, TransactionDate timestamp, TransactionType varchar2(20), TransactionAmount float, NewBalance float,
+WithdrawalCount int, DepositCount int, OldBalance float);
+--drop table TRANSACTION;
+Insert into TRANSACTION values('2101001831501',timestamp '2019-01-21 11:30:19','Deposit','25000','28500',0,1,3500);
+
+Create Table State_city(City varchar2(20),State varchar2(20));
+Insert into State_city values('Chennai','Tamil Nadu');
+
+Create table Zip (Zip_code int, City varchar2(20));
+Insert into Zip values(625543,'Chennai');
+
+Create table LOANTYPE (Loan_Type varchar2(20) PRIMARY KEY, InterestRate float);
+Insert into LOANTYPE values('Gold Loan',8.45);
+
+Create table LOAN_DETAILS (LoanNumber int PRIMARY KEY, LoanAmount float, LoanApprovalDate date, Loan_Type varchar2(20)) ;
+Insert into LOAN_DETAILS values(145, 90000, date '2021-09-01','Gold Loan');
+
+Create table CARD_DETAILS (CardNumber varchar(16) PRIMARY KEY, CardHolder varchar2(20), CardType varchar(20), CCV number(3), ExpirtDate date) ;
+INSERT into CARD_DETAILS values('9987654309280098','Nick Santa','VISA',987, date '2023-06-17');
+
+Create table BILL_PAYMENTS (BillPayment_no varchar(20) PRIMARY KEY, PaymentType varchar(30),PaymentConfirmation varchar(15), PaymentAmount float); 
+Insert into BILL_PAYMENTS values('#ORID08267e256','Net banking','Confirmed',2500);
+
+Create table FailedTransactionLog (FailedTransaction_errorType varchar(30), FailedTransactionID varchar(15) PRIMARY KEY) ;
+Insert into FailedTransactionLog values('Network','21010018315');
+
+Create Table USERLOGINS (UserLoginID int PRIMARY KEY, UserName varchar(20), password varchar(12));
+Insert into USERLOGINS values(315001, 'NickSanta','abcdefghijkl');
+
+Create table Cus_Mobile (Customer_id int, Mobile_no number(10),PRIMARY KEY (Customer_id,Mobile_no));
+Insert into Cus_Mobile values(900001,9087673456);
+Insert into Cus_Mobile values(900001,9087436456);
+
+Create table Emp_Mob(Emp_id varchar(10), Emp_Mobile number(10),PRIMARY KEY (Emp_id, Emp_Mobile) );
+Insert into Emp_Mob values('AMAR0001',9080673456);
+Insert into Emp_Mob values('AMAR0001',9088934356);
+
+Create table  Loan_num(Customer_id int, LoanNumber int,PRIMARY KEY (Customer_id,LoanNumber));
+Insert into Loan_num values(900019,145);
+--select * from Loan_num natural inner join (LOAN_DETAILS natural inner join LOANTYPE);
+
+Create table Transact (AccountID varchar(20), TransactionID varchar(15), PRIMARY KEY (AccountID,TransactionID));
+Insert into Transact values('13520010018315','21010018315');
+
+Create table Bill (AccountID varchar(20), Billpayment_no varchar(20), PRIMARY KEY (AccountID,Billpayment_no));
+Insert into Bill values('13520010018315','#ORID08267e256');
+
+Chennai
+Delhi
+Mumbai Maharastra
+
+
+
+
+
+
