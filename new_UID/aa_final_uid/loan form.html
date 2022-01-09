@@ -193,7 +193,7 @@
         </div>
         <br><br><br>
         
-        <div  name="loan" id="loan"><form method ="post" action="#"  onsubmit="return validateForm()">
+        <div  name="loan" id="loan"><form method ="post" action="loanformsubmissionsuccess.html"  onsubmit="return validateForm()">
         <table  cellpadding="9" align="center"><tr><h1><center></center> </h1></tr><tr></tr>        
         <tr><td><label>Name(as on aadhar card)<a style=color:red;> *</a>     :</label></td><td><input type ="text"  id="name"  onkeypress="return onlyAlphaKey(event)" ><span  id="namee" style="color: red; font-size: 18px;"></span></td></tr>
         <tr><td><label>Account number<a style=color:red;> *</a>      :</label></td><td><input type ="text"  id="acno" onkeypress="return onlyNumberKey(event)" ><span  id="acnoo" style="color: red; font-size: 18px;"></span></td></tr>
@@ -210,8 +210,8 @@
             <option value="vehicle loan">Vehicle loan</option>
             <option value="industrial loan"> Industrial loan</option></td>
         <tr><td><label>Gender <a style=color:red;>*</a>:</label>&nbsp;&nbsp;&nbsp;</td>
-        <td><input type ="radio"  id="gender">&nbsp; <span >Male</span>&nbsp;&nbsp;&nbsp;         
-        <input type ="radio"  id="gender">&nbsp; <span >Female</span>&nbsp;&nbsp;&nbsp;<span  id="gendere" style="color: red; font-size: 18px;"></span></td></tr>
+        <td><input type ="radio" name="2"  id="gender">&nbsp; <span >Male</span>&nbsp;&nbsp;&nbsp;         
+        <input type ="radio"name="2"  id="gender">&nbsp; <span >Female</span>&nbsp;&nbsp;&nbsp;<span  id="gendere" style="color: red; font-size: 18px;"></span></td></tr>
         <tr><td><label>annual income <a style=color:red;>*</a>:</label>&nbsp;&nbsp;&nbsp;</td>
             <td><input type ="radio"  id="inc">&nbsp; <span >Below 1 lakh</span>&nbsp;&nbsp;&nbsp;<span  id="incc" style="color: red; font-size: 18px;"></span></td></tr>
             <tr><td></td><td><input type ="radio"  id="inc">&nbsp; <span >1 lakh - 3 lakh</span>&nbsp;&nbsp;&nbsp;</td></tr>
