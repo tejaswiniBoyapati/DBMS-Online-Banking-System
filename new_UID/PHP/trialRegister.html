@@ -5,94 +5,6 @@
         <link rel="stylesheet" type="text/css" href="mainPage.css">
         <link rel="stylesheet" type="text/css" href="nav_logo.css">
         <link rel="stylesheet" type="text/css" href="LoginForm.css">
-        <script type = "text/javascript">
-            function validateForm(){
-            var finame=document.getElementById("fname").value;
-            var laname=document.getElementById("lname").value;
-            var accNo=document.getElementById("accountid").value;
-            var mail=document.getElementById("email").value;
-            var mobile=document.getElementById("pno").value;
-            var pw=document.getElementById("password").value;
-            var cpw=document.getElementById("cpassword").value;
-            var at =mail.indexOf("@");
-            var dot=mail.lastIndexOf(".");
-            if(finame=="")
-             {
-                alert("Please enter your firstname");
-                return false;
-             }
-            else if(laname=="")
-             {
-                alert("Please enter your last name");
-                return false;
-             }
-             else if(accNo=="")
-            {
-                alert("Please enter your Acc Number");
-                return false;
-            }
-            else if (accNo<= 1000000000000000 && accNo<=9999999999999999) {
-               alert("Account Number should be 16 digits");
-               return false;
-                }
-            else if(mail=="")
-            {
-                alert("Please enter your email");
-                return false;
-            }
-            else if (at< 1 || ( (dot - at) < 2 )) {
-               alert("Please enter correct email ID");
-               return false;
-                }
-            else if(mobile=="")
-            {
-                alert("Please enter your phone number");
-                return false;
-            }
-            else if (mobile<= 10000000 || mobile<=99999999) {
-               alert("phone number should be 10 digits");
-               return false;
-                }
-            else if(pw=="")
-            {
-                alert("Please enter your password");
-                return false;
-            }
-            else if (pw.length<8)
-            {
-                alert("length of the password should be greater than 8");
-                return false;
-            }
-            else if (pw.search(/[0-9]/)==-1)
-            {
-                alert("pawword should contain atleat a number");
-                return false;
-            }
-            else if (pw.search(/[A-Z]/)==-1)
-            {
-                alert("pawword should contain atleat a uppercase alphabet");
-                return false;
-            }
-            else if (pw.search(/[a-z]/)==-1)
-            {
-                alert("pawword should contain atleat a lowercase alphabet");
-                return false;
-            }
-             else if (pw.search(/[\@\#\$ \%\^\&\*\(\)\_\-\+\=\<\, \>\?]/)==-1){
-                alert("pawword should contain atleat a special symbol");
-                return false;
-            }
-            else if (cpw!=pw)
-            {
-                alert("password doesn't match");
-                return false;
-            }
-             else{
-               alert("signup successful");
-                return true;
-            }               
-           }                         
-           </script>
     </head>
     <body style="background: url(https://cdn.discordapp.com/attachments/862331232409878548/917849375907147846/shapelined-_JBKdviweXI-unsplash.jpg); background-size: 100%;">
     
@@ -157,7 +69,7 @@
                             <tr><td><label>Address<a style="color: red;"> *</a>       :</label></td><td><input name="address" id="address" placeholder="enter address"></td></tr>
                             <tr><td><label>Zip Code<a style="color:red"> *</a>        :</label></td><td><input name="zipcode" id="zip" placeholder="enter zip"></td></tr>
                             <tr><td><label>User Name<a style=color:red;> *</a>   :</label></td><td><input type ="password" name="username" id="us"  value="" required="" placeholder="Enter username"></td></tr>
-                            <tr><td><label>Enter password<a style=color:red;> *</a>   :</label></td><td><input type ="password" name="password" id="password"  value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required></td></tr>
+                            <tr><td><label>Enter password<a style=color:red;> *</a>   :</label></td><td><input type ="password" name="password" id="password"  value=""></td></tr>
                             <tr><td><label>Re-enter password<a style=color:red;> *</a> :</label></td><td><input type ="password" name="password" id="cpassword" value=""></td></tr>
                            <tr><td><label>Security Question - Favourite Teacher in Childhood<a style=color:red;> *</a> :</label></td><td><input type ="text" name="security_ans" id="sec" value="" required=""></td></tr>
                             <tr><td><label><input type="submit" id="submit" name="Submit" value="Submit"  /></label></td>
